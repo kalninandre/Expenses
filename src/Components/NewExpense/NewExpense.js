@@ -7,17 +7,16 @@ const NewExpense = (props) => {
     const expenseDataHandler = (expenseData) => {
         expenseData = {
             ...expenseData,
-            id: Math.random().toString()
+            id: Math.random().toString(),
         };
         props.onAddExpense(expenseData);
     };
 
     return (
         <div className='new-expense'>
-            <NewExpenseForm onSubmitExpenseData={expenseDataHandler}/>
+            <NewExpenseForm onSubmitExpenseData={expenseDataHandler} />
         </div>
-    )
+    );
 };
-
 
 export default NewExpense;
